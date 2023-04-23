@@ -1,0 +1,14 @@
+# Configuration
+
+NSite               100
+NThermalize         5000
+NEvent              10000
+
+HotStart            1
+LatticeRange        -1. 1.
+ShiftMax            0.5
+
+Step                0.1
+HBar                1.
+
+Potential           0. 0.
