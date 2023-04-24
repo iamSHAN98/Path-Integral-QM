@@ -4,13 +4,17 @@ import sys
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+from parser import get_arguments, get_config
+
+# Load configuration
+
+args = get_arguments()
 
 # Load data
 
-file = sys.argv[1]
-print("Reading from", file)
+print("Reading from", args.input[0])
+data = np.loadtxt(args.input[0])
 
-data = np.loadtxt(file)
 count, center = np.histogram(data, bins = 100)
 print("Mean :", np.mean(data), ", StdDev :", np.std(data))
 
